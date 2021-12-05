@@ -19,7 +19,8 @@ exports.config = {
     defaultTimeoutInterval: 30000
   },
 
-  onPrepare: function(){
-    browser.manage().window().maximize();
+  onPrepare: async function() {
+    await browser.waitForAngularEnabled(false);
+    await browser.manage().window().maximize();
   }
 };
