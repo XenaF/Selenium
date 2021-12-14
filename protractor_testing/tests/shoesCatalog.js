@@ -27,7 +27,7 @@ const { scrollToElement } = require('../utils');
 
     it('My bag page is displayed', async function() {
         await browser.sleep(200);
-        await element(by.xpath('//*[@id="product-tile-498503"]/div/a/app-picture/picture/img')).click();
+        await element(by.css('[src="https://images.dsw.com/is/image/DSWShoes/512085_001_ss_01?impolicy=colpg&imwidth=800&imdensity=1"]')).click();
         await browser.sleep(5000);
         const addToBagButton = await element(by.xpath('(//*[@id="pdp-attributes"]/div[3])[2]'));
         await scrollToElement(addToBagButton);
