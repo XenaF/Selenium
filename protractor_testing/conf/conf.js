@@ -1,8 +1,9 @@
-// An example configuration file.
+var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
+
 exports.config = {
   directConnect: true,
 
-  // Capabilities to be passed to the webdriver instance.
+
   capabilities: {
     'browserName': 'chrome'
   },
@@ -22,5 +23,12 @@ exports.config = {
   onPrepare: async function() {
     await browser.waitForAngularEnabled(false);
     await browser.manage().window().maximize();
+    jasmine.getEnv().addReporter(
+      new Jasmine2HtmlReporter({
+        savePath: './protractor_testing/reports',
+        cleanDestination: false,
+        fileName: 'testReport'
+      })
+    );
   }
 };
