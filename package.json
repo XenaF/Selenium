@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "protractor protractor_testing/conf/conf.js",
-    "start": "node selenium_testing/test/bbcNewsSearch.js",
+    "start": "mocha",
     "webdriver-manager-update": "webdriver-manager update",
     "webdriver-manager-start": "webdriver-manager start"
   },
