@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/XenaF/Selenium#readme",
   "dependencies": {
+    "chromedriver": "^96.0.0",
     "selenium-webdriver": "^4.0.0"
   },
   "devDependencies": {

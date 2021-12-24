@@ -5,5 +5,5 @@ module.exports = {
     reporter: 'spec',
     timeout: 10000,
     ui: 'bdd',
-    spec: 'test/*.js'
+    spec: 'selenium_testing/test/*.js'
 };
