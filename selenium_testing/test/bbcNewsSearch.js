@@ -40,5 +40,6 @@ beforeEach(async function() {
             let articleTitle = await driver.findElement(By.css('[data-id="1730736"] .c-article-title')).getText();
             console.log(articleTitle);
             expect(articleTitle).equal('Belarus state airline Belavia and Turkey move to stop migrant flights');
+            await driver.quit();
         });
     });

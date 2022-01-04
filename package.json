@@ -4,8 +4,8 @@
   "description": "Selenium project",
   "main": "index.js",
   "scripts": {
-    "test": "protractor protractor_testing/conf/conf.js && mocha",
-    "start": "mocha",
+    "protractor": "protractor protractor_testing/conf/conf.js",
+    "mocha": "mocha",
     "webdriver-manager-update": "webdriver-manager update",
     "webdriver-manager-start": "webdriver-manager start"
   },
