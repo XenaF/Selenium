@@ -1,4 +1,3 @@
-//var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 const {SpecReporter} = require ("jasmine-spec-reporter");
 
 exports.config = {
@@ -17,11 +16,7 @@ exports.config = {
   onPrepare: async function() {
     await browser.waitForAngularEnabled(false);
     await browser.manage().window().maximize();
-    //jasmine.getEnv().addReporter(
-      // new Jasmine2HtmlReporter({
-      //   savePath: './protractor_testing/reports',
-      //   cleanDestination: false,
-      //   fileName: 'testReport'
+
     jasmine.getEnv().addReporter(
       new SpecReporter({
         suite: {

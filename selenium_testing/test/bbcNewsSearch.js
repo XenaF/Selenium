@@ -13,9 +13,13 @@ const driver = new webdriver.Builder()
 
 describe('News Search', function() {
 
-beforeEach(async function() {
+    beforeEach(async function() {
         await driver.manage().window().maximize();
     });
+
+    after(async function() {
+        await driver.quit();
+   })
     
         it('should search news by "Minsk" value', async function() {
             let globalNewsSearch = 'Minsk';
@@ -38,8 +42,6 @@ beforeEach(async function() {
             driver.sleep(10000);
             await driver.findElement(By.xpath('//*[@id="jsMainMediaArticle-1730736"]/div[2]/div[11]/div[4]/div[2]/div[1]')).click();
             let articleTitle = await driver.findElement(By.css('[data-id="1730736"] .c-article-title')).getText();
-            console.log(articleTitle);
             expect(articleTitle).equal('Belarus state airline Belavia and Turkey move to stop migrant flights');
-            await driver.quit();
         });
     });
